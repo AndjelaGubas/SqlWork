@@ -7,8 +7,8 @@ select
 from 
 	employee emp
 	left join salary sal on emp.emp_no = sal.emp_no
-	left join dept_emp de on emp.emp_no = de.emp_no
-	left join department dept on de.dept_no = dept.dept_no
+    left join dept_emp de on emp.emp_no = de.emp_no
+    left join department dept on de.dept_no = dept.dept_no
 where 
 	sal.to_date = '9999-01-01';
 

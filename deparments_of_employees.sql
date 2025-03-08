@@ -13,7 +13,7 @@ begin
         de.dept_no = d.dept_no
 	where 
 		emp.emp_no = p_emp_no and
-		de.to_date = '9999-01-01'
+		de.to_date = '9999-01-01';
         
 end //
 delimiter ;

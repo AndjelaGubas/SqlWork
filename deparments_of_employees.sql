@@ -12,10 +12,10 @@ begin
         left join department d on
         de.dept_no = d.dept_no
 	where 
-		emp.emp_no = p_emp_no and
-		de.to_date = '9999-01-01';
+		emp.emp_no = p_emp_no
+	order by from_date desc;
         
 end //
 delimiter ;
-call departments_of_employees(10017);
+call departments_of_employees(500008);
 

@@ -10,8 +10,6 @@ proc: begin
 
 	select count(*) into l_is_exists from dept_emp where emp_no = p_emp_no and dept_no = p_dept_no and to_date = '9999-01-01';
 	if l_is_exists > 0 then
-		select 'zaposleni je vec u departmentu';
-	else
 		insert into dept_emp(emp_no, dept_no, from_date, to_date) 
 		values (p_emp_no, p_dept_no, now(), '9999-01-01');
 	end if;
